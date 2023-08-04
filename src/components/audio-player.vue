@@ -18,7 +18,7 @@
         :loading="isInProgress"
       />
       <div class="layout">
-        <button class="player-btn" icon large @click="unmuteAndTogglePlay()">
+        <button class="player-btn" icon large type="button" @click="unmuteAndTogglePlay()">
           <pause-icon v-if="playing"/>
           <replay-icon v-else-if="ended"/>
           <play-icon v-else />

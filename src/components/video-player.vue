@@ -39,7 +39,7 @@
         :loading="isInProgress"
       />
       <div class="layout">
-        <button class="player-btn" @click="unmuteAndTogglePlay()">
+        <button class="player-btn" type="button" @click="unmuteAndTogglePlay()">
           <pause-icon v-if="playing"/>
           <replay-icon v-else-if="ended"/>
           <play-icon v-else/>
@@ -58,11 +58,11 @@
           <span>&nbsp;/&nbsp;</span>
           <span v-text="durationTime" />
         </div>
-        <button class="player-btn" @click="toggleMute()">
+        <button class="player-btn" type="button" @click="toggleMute()">
           <volume-off-icon v-if="muted"/>
           <volume-up-icon v-else/>
         </button>
-        <button class="player-btn" @click="toggleFullScreen()">
+        <button class="player-btn" type="button" @click="toggleFullScreen()">
           <fullscreen-exit-icon v-if="fullscreen"/>
           <fullscreen-icon v-else/>
         </button>
